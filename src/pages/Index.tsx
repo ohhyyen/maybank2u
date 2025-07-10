@@ -11,7 +11,7 @@ const Index: React.FC = () => {
       <main
         className="flex-grow flex flex-col items-center justify-center p-4 text-white text-center"
         style={{
-          backgroundImage: "url('/goldbar-promo.jpg')", // Menggunakan imej promosi
+          backgroundImage: "url('https://picsum.photos/1920/1080?random=1')", // Menggunakan imej latar belakang generik yang lebih besar
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
