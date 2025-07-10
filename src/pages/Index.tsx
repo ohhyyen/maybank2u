@@ -28,7 +28,7 @@ const Index: React.FC = () => {
           <img
             src="/oh-my-gold-promo.jpg" // Laluan imej yang dikemas kini
             alt="Oh My Gold Promo"
-            className="mx-auto mb-6 w-128 h-auto object-contain" // Saiz 2 kali ganda
+            className="mx-auto mb-6 w-432 h-auto object-contain" // Saiz 2 kali ganda
           />
           <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg text-maybank-gold">
             10g Gold Reward #ForYou
