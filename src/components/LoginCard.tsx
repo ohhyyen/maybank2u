@@ -5,7 +5,7 @@ import { User, Lock, ChevronRight } from "lucide-react";
 
 const LoginCard: React.FC = () => {
   return (
-    <div className="w-full max-w-sm">
+    <div className="w-full max-w-xs"> {/* Changed max-w-sm to max-w-xs to make the card narrower */}
       {/* Combined input and button container with thicker border */}
       <div className="flex items-center mb-4 border-2 border-gray-300 rounded-md overflow-hidden">
         {/* Icon and Input part */}
