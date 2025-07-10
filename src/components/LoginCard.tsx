@@ -6,7 +6,7 @@ import { User, Lock, ChevronRight } from "lucide-react";
 const LoginCard: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-sm">
-      <div className="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4">
+      <div className="flex items-center border border-gray-300 rounded-md overflow-hidden"> {/* Removed mb-4 */}
         <div className="p-3 bg-gray-50 border-r border-gray-300">
           <User className="h-5 w-5 text-gray-500" />
         </div>
@@ -16,7 +16,7 @@ const LoginCard: React.FC = () => {
           className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0"
         />
       </div>
-      <Button className="w-full bg-maybank-gold hover:bg-yellow-600 text-white font-semibold py-2 rounded-md flex items-center justify-center space-x-2">
+      <Button className="w-full bg-maybank-gold hover:bg-yellow-600 text-white font-semibold py-2 rounded-md flex items-center justify-center space-x-2"> {/* No mt-4 needed here as it's directly after the input div */}
         <Lock className="h-5 w-5" />
         <span>LOGIN</span>
       </Button>
