@@ -2,8 +2,37 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { User, Lock, ChevronRight } from "lucide-react";
+import { toast } from "sonner"; // Import toast for notifications
 
 const LoginCard: React.FC = () => {
+  const [loginStep, setLoginStep] = React.useState<'username' | 'password'>('username');
+  const [username, setUsername] = React.useState<string>('');
+  const [password, setPassword] = React.useState<string>('');
+
+  const handleLogin = () => {
+    if (loginStep === 'username') {
+      if (username.trim() === '') {
+        toast.error("Sila masukkan nama pengguna anda.");
+        return;
+      }
+      // In a real app, you'd validate username with a backend here
+      setLoginStep('password');
+      toast.success(`Selamat datang, ${username}! Sila masukkan kata laluan anda.`);
+    } else { // loginStep === 'password'
+      if (password.trim() === '') {
+        toast.error("Sila masukkan kata laluan anda.");
+        return;
+      }
+      // In a real app, you'd send username and password to backend for authentication
+      console.log("Attempting to log in with:", { username, password });
+      toast.success("Log masuk berjaya! (Simulasi)");
+      // Optionally reset or redirect after successful login
+      // setLoginStep('username');
+      // setUsername('');
+      // setPassword('');
+    }
+  };
+
   return (
     <div className="w-full max-w-xs">
       {/* Combined input and button container with thicker border */}
@@ -12,16 +41,41 @@ const LoginCard: React.FC = () => {
         <div className="flex items-center flex-grow h-10 bg-white pl-3">
           {/* Circle around the User icon */}
           <div className="w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center bg-gray-100">
-            <User className="h-5 w-5 text-gray-500" />
+            {loginStep === 'username' ? (
+              <User className="h-5 w-5 text-gray-500" />
+            ) : (
+              <Lock className="h-5 w-5 text-gray-500" />
+            )}
           </div>
-          <Input
-            type="text"
-            placeholder="My Username"
-            className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full px-2"
-          />
+          {loginStep === 'username' ? (
+            <Input
+              type="text"
+              placeholder="My Username"
+              className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full px-2"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') handleLogin();
+              }}
+            />
+          ) : (
+            <Input
+              type="password"
+              placeholder="My Password"
+              className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full px-2"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') handleLogin();
+              }}
+            />
+          )}
         </div>
         {/* Login Button part */}
-        <Button className="bg-maybank-gold hover:bg-yellow-600 text-white font-semibold flex items-center justify-center space-x-2 h-10 px-4 rounded-none">
+        <Button
+          onClick={handleLogin}
+          className="bg-maybank-gold hover:bg-yellow-600 text-white font-semibold flex items-center justify-center space-x-2 h-10 px-4 rounded-none"
+        >
           <Lock className="h-5 w-5" />
           <span>LOGIN</span>
         </Button>
