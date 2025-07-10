@@ -51,7 +51,7 @@ const LoginCard: React.FC = () => {
             <Input
               type="text"
               placeholder="My Username"
-              className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full px-2"
+              className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full px-2 text-gray-700"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               onKeyPress={(e) => {
@@ -62,7 +62,7 @@ const LoginCard: React.FC = () => {
             <Input
               type="password"
               placeholder="My Password"
-              className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full px-2"
+              className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full px-2 text-gray-700"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyPress={(e) => {
