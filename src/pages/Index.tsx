@@ -42,7 +42,7 @@ const Index: React.FC = () => {
                 Log Masuk Sekarang
               </Button>
             </Link>
-            <Button variant="outline" className="border-maybank-gold text-maybank-gold hover:bg-maybank-gold hover:text-white font-semibold px-8 py-3 text-lg rounded-md">
+            <Button className="bg-black/30 text-white hover:bg-black/40 font-semibold px-6 py-2 text-lg rounded-md">
               Ketahui Lebih Lanjut
             </Button>
           </div>
