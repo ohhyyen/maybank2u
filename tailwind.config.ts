@@ -62,6 +62,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "maybank-gold": "#FDCB00", // Custom color for Maybank gold
       },
       borderRadius: {
         lg: "var(--radius)",
