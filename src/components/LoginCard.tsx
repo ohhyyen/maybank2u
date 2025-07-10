@@ -6,20 +6,22 @@ import { User, Lock, ChevronRight } from "lucide-react";
 const LoginCard: React.FC = () => {
   return (
     <div className="w-full max-w-sm">
-      <div className="flex items-center mb-4">
-        {/* Username Input with integrated icon and white background */}
-        <div className="flex items-center border border-gray-300 rounded-l-md overflow-hidden flex-grow h-10 bg-white"> {/* Added bg-white here */}
-          <div className="px-3 flex items-center justify-center"> {/* Removed bg-gray-50 from here */}
+      {/* Combined input and button container with thicker border */}
+      <div className="flex items-center mb-4 border-2 border-gray-300 rounded-md overflow-hidden">
+        {/* Icon and Input part */}
+        <div className="flex items-center flex-grow h-10 bg-white pl-3">
+          {/* Circle around the User icon */}
+          <div className="w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center bg-gray-100">
             <User className="h-5 w-5 text-gray-500" />
           </div>
           <Input
             type="text"
             placeholder="My Username"
-            className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full"
+            className="flex-grow border-none focus-visible:ring-0 focus-visible:ring-offset-0 h-full px-2"
           />
         </div>
-        {/* Login Button */}
-        <Button className="bg-maybank-gold hover:bg-yellow-600 text-white font-semibold rounded-r-md rounded-l-none flex items-center justify-center space-x-2 h-10 px-4">
+        {/* Login Button part */}
+        <Button className="bg-maybank-gold hover:bg-yellow-600 text-white font-semibold flex items-center justify-center space-x-2 h-10 px-4 rounded-none">
           <Lock className="h-5 w-5" />
           <span>LOGIN</span>
         </Button>
