@@ -26,7 +26,7 @@ const Index: React.FC = () => {
           />
           {/* Imej baru diletakkan di sini */}
           <img
-            src="/images (1).jpg"
+            src="/oh-my-gold-promo.jpg" // Laluan imej yang dikemas kini
             alt="Oh My Gold Promo"
             className="mx-auto mb-6 w-64 h-auto object-contain" // Gaya responsif untuk imej baru
           />
