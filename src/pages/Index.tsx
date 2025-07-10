@@ -13,7 +13,7 @@ const Index: React.FC = () => {
       <main
         className="flex-grow flex items-center justify-center p-4"
         style={{
-          backgroundImage: "url('/imgi_29_homebg.jpg')", // Using the new background image
+          backgroundImage: "url('https://via.placeholder.com/1920x1080/A0A0A0/FFFFFF?text=Your+Background+Image')", // Placeholder image
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
