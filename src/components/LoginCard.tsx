@@ -5,7 +5,7 @@ import { User, Lock, ChevronRight } from "lucide-react";
 
 const LoginCard: React.FC = () => {
   return (
-    <div className="w-full max-w-xs"> {/* Changed max-w-sm to max-w-xs to make the card narrower */}
+    <div className="w-full max-w-xs">
       {/* Combined input and button container with thicker border */}
       <div className="flex items-center mb-4 border-2 border-gray-300 rounded-md overflow-hidden">
         {/* Icon and Input part */}
@@ -26,7 +26,10 @@ const LoginCard: React.FC = () => {
           <span>LOGIN</span>
         </Button>
       </div>
-      <Button variant="ghost" className="w-full text-gray-700 hover:bg-gray-100 flex items-center justify-center space-x-2">
+      {/* Modified Forgot Login Details Button */}
+      <Button
+        className="bg-black/30 text-white px-4 py-2 rounded-md block mx-auto hover:bg-black/40 flex items-center justify-center space-x-2"
+      >
         <span>FORGOT LOGIN DETAILS</span>
         <ChevronRight className="h-4 w-4" />
       </Button>
