@@ -5,7 +5,7 @@ import FooterNav from "@/components/FooterNav";
 
 const LoginPage: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       {/* Header */}
       <Header />
 

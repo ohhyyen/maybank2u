@@ -43,7 +43,7 @@ const FooterNav: React.FC = () => {
   );
 
   return (
-    <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 shadow-lg py-4 px-4 md:px-6">
+    <div className="w-full bg-white bg-opacity-90 shadow-lg py-4 px-4 md:px-6">
       {isMobile ? (
         <Collapsible
           open={isOpen}

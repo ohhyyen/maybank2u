@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Index: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Header />
       <main
         className="flex-grow flex flex-col items-center justify-center p-4 text-white text-center"
