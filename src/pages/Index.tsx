@@ -18,6 +18,12 @@ const Index: React.FC = () => {
         }}
       >
         <div className="bg-black bg-opacity-40 p-8 rounded-lg max-w-2xl mx-auto">
+          {/* Imej goldbar-promo.jpg diletakkan di sini */}
+          <img
+            src="/goldbar-promo.jpg"
+            alt="10g Gold Reward Promo"
+            className="mx-auto mb-6 w-48 h-auto object-contain" // Gaya responsif untuk imej
+          />
           <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg text-maybank-gold">
             10g Gold Reward #ForYou
           </h1>
