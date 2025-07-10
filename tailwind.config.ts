@@ -91,6 +91,14 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      spacing: { // Menambah saiz tersuai untuk lebar
+        '128': '32rem',
+        '144': '36rem',
+        '192': '48rem',
+        '256': '64rem',
+        '384': '96rem',
+        '432': '108rem', // 3 kali ganda dari 144 (36rem * 3)
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

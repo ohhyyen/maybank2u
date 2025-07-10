@@ -17,12 +17,12 @@ const Index: React.FC = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="bg-black bg-opacity-40 p-8 rounded-lg max-w-2xl mx-auto">
+        <div className="bg-black bg-opacity-40 p-8 rounded-lg w-full max-w-screen-lg mx-auto"> {/* Melaraskan lebar kontena */}
           {/* Imej goldbar-promo.jpg diletakkan di sini */}
           <img
             src="/goldbar-promo.jpg"
             alt="10g Gold Reward Promo"
-            className="mx-auto mb-6 w-144 h-auto object-contain" // Saiz 3 kali ganda
+            className="mx-auto mb-6 w-432 h-auto object-contain" // Saiz 3 kali ganda dari sebelumnya
           />
           {/* Imej baru diletakkan di sini */}
           <img
@@ -34,7 +34,7 @@ const Index: React.FC = () => {
             10g Gold Reward #ForYou
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-semibold">
-            Menangi 10g Gold Bar! 300 Pemenang Setiap Bulan!
+            Menangi Hadiah Istimewa "10g Gold Bar" Untuk 300 Pemenang Setiap Bulan! Mungkin Anda Pemenang Bulan ini , Log Masuk Dan Semak Di Bahagian Pemberitahuan , Mungkin 10g Gold Bar Adalah Milik Anda .
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/login">
