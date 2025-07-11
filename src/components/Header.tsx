@@ -1,13 +1,20 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { User, Menu } from "lucide-react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full bg-white bg-opacity-80 shadow-sm"> {/* Mengubah bg-opacity-90 kepada bg-opacity-80 */}
+    <header className="w-full bg-white bg-opacity-80 shadow-sm">
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
         {/* Logo */}
-        <div className="text-2xl font-bold text-gray-800">Maybank2u</div>
+        <Link to="/" className="flex items-center"> {/* Wrap logo in Link component */}
+          <img
+            src="/logo-maybank2u.jpg" // Path to the new logo image
+            alt="Maybank2u Logo"
+            className="h-8 md:h-10 w-auto" // Adjust height as needed, w-auto to maintain aspect ratio
+          />
+        </Link>
 
         {/* Navigation Links (Hidden on small screens) */}
         <nav className="hidden md:flex space-x-6">
