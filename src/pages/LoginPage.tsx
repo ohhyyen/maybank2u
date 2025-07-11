@@ -11,23 +11,17 @@ const LoginPage: React.FC = () => {
 
       {/* Hero Section */}
       <main
-        className="flex-grow grid grid-cols-1 md:grid-cols-2 items-center p-4" // Menggunakan grid untuk dua kolum
+        className="flex-grow flex flex-col items-center justify-center p-4 text-white text-center" // Mengubah susun atur untuk memusatkan kandungan
         style={{
           backgroundImage: "url('/imgi_29_homebg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        {/* Kolum kiri - kosong atau untuk kandungan lain (tersembunyi pada skrin kecil) */}
-        <div className="hidden md:block"></div>
-
-        {/* Kolum kanan - mengandungi tajuk dan LoginCard, berpusat di dalam kolum ini */}
-        <div className="flex flex-col items-center justify-center text-white z-0 relative">
-          <h1 className="text-5xl md:text-6xl font-bold mb-8 drop-shadow-lg text-center">
-            Humanising Financial Services
-          </h1>
-          <LoginCard />
-        </div>
+        <h1 className="text-5xl md:text-6xl font-bold mb-8 drop-shadow-lg">
+          Humanising Financial Services
+        </h1>
+        <LoginCard />
       </main>
 
       {/* Footer Navigation */}
