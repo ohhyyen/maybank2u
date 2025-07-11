@@ -22,16 +22,16 @@ const Index: React.FC = () => {
           <img
             src="/goldbar-promo.jpg"
             alt="10g Gold Reward Promo"
-            className="mx-auto mb-6 w-432 h-auto object-contain"
+            className="mx-auto mb-6 w-216 h-auto object-contain"
           />
           {/* Imej baru diletakkan di sini */}
           <img
             src="/oh-my-gold-promo.jpg"
             alt="Oh My Gold Promo"
-            className="mx-auto mb-6 w-432 h-auto object-contain"
+            className="mx-auto mb-6 w-216 h-auto object-contain"
           />
           {/* Kotak lutsinar yang lebih gelap untuk teks promosi */}
-          <div className="bg-black/60 p-6 rounded-lg mb-8 font-sans"> {/* Mengubah font-serif kepada font-sans */}
+          <div className="bg-black/60 p-6 rounded-lg mb-8 font-sans">
             <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg text-maybank-gold">
               10g Gold Reward #ForYou
             </h1>
@@ -39,7 +39,7 @@ const Index: React.FC = () => {
               Menangi Hadiah Istimewa "10g Gold Bar" Untuk 300 Pemenang Setiap Bulan! Mungkin Anda Pemenang Bulan ini , Log Masuk Dan Semak Di Bahagian Pemberitahuan , Mungkin 10g Gold Bar Adalah Milik Anda .
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-4 justify-center"> {/* Dibuang sm:flex-row untuk susunan menegak */}
             <Link to="/login">
               <Button className="bg-maybank-gold hover:bg-yellow-600 text-white font-semibold px-8 py-3 text-lg rounded-md">
                 Log Masuk Sekarang

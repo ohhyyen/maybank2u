@@ -98,6 +98,7 @@ export default {
         '256': '64rem',
         '384': '96rem',
         '432': '108rem', // 3 kali ganda dari 144 (36rem * 3)
+        '216': '54rem', // Separuh dari 432
       }
     },
   },
