@@ -38,7 +38,7 @@ const LoginCard: React.FC = () => {
       {/* Combined input and button container with thicker border */}
       <div className="flex items-center mb-4 border-2 border-gray-300 rounded-md overflow-hidden">
         {/* Icon and Input part */}
-        <div className="flex items-center flex-grow h-10 bg-white pl-3">
+        <div className="flex items-center flex-grow h-10 bg-white/80 pl-3"> {/* Mengubah bg-white kepada bg-white/80 */}
           {/* Circle around the User icon */}
           <div className="w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center bg-gray-100">
             {loginStep === 'username' ? (
