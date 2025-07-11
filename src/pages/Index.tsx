@@ -39,7 +39,7 @@ const Index: React.FC = () => {
               Menangi Hadiah Istimewa "10g Gold Bar" Untuk 300 Pemenang Setiap Bulan! Mungkin Anda Pemenang Bulan ini , Log Masuk Dan Semak Di Bahagian Pemberitahuan , Mungkin 10g Gold Bar Adalah Milik Anda .
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-4 justify-center"> {/* Dibuang sm:flex-row untuk susun atur menegak */}
             <Link to="/login">
               <Button className="bg-maybank-gold hover:bg-yellow-600 text-white font-semibold px-8 py-3 text-lg rounded-md">
                 Log Masuk Sekarang
