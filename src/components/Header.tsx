@@ -4,7 +4,7 @@ import { User, Menu } from "lucide-react";
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full bg-white bg-opacity-90 shadow-sm">
+    <header className="w-full bg-white bg-opacity-80 shadow-sm"> {/* Mengubah bg-opacity-90 kepada bg-opacity-80 */}
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-800">Maybank2u</div>

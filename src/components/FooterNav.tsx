@@ -43,7 +43,7 @@ const FooterNav: React.FC = () => {
   );
 
   return (
-    <div className="w-full bg-white bg-opacity-90 shadow-lg py-4 px-4 md:px-6">
+    <div className="w-full bg-white bg-opacity-80 shadow-lg py-4 px-4 md:px-6"> {/* Mengubah bg-opacity-90 kepada bg-opacity-80 */}
       {isMobile ? (
         <Collapsible
           open={isOpen}
