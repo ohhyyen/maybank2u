@@ -9,7 +9,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
         {/* Logo as text */}
         <Link to="/" className="flex items-center"> {/* Wrap logo in Link component */}
-          <span className="text-2xl md:text-3xl font-bold text-maybank-gold">
+          <span className="text-2xl md:text-3xl font-bold text-black">
             Maybank2u
           </span>
         </Link>
