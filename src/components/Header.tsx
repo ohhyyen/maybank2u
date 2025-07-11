@@ -7,13 +7,11 @@ const Header: React.FC = () => {
   return (
     <header className="w-full bg-white bg-opacity-80 shadow-sm">
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
-        {/* Logo */}
+        {/* Logo as text */}
         <Link to="/" className="flex items-center"> {/* Wrap logo in Link component */}
-          <img
-            src="/logo-maybank2u.jpg" // Path to the new logo image
-            alt="Maybank2u Logo"
-            className="h-8 md:h-10 w-auto" // Adjust height as needed, w-auto to maintain aspect ratio
-          />
+          <span className="text-2xl md:text-3xl font-bold text-maybank-gold">
+            Maybank2u
+          </span>
         </Link>
 
         {/* Navigation Links (Hidden on small screens) */}
