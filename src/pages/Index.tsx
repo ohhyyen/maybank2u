@@ -31,7 +31,7 @@ const Index: React.FC = () => {
             className="mx-auto mb-6 w-432 h-auto object-contain"
           />
           {/* Kotak lutsinar yang lebih gelap untuk teks promosi */}
-          <div className="bg-black/60 p-6 rounded-lg mb-8 font-serif"> {/* Menambah bg-black/60, padding, rounded, dan font-serif */}
+          <div className="bg-black/60 p-6 rounded-lg mb-8 font-sans"> {/* Mengubah font-serif kepada font-sans */}
             <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg text-maybank-gold">
               10g Gold Reward #ForYou
             </h1>
@@ -45,7 +45,7 @@ const Index: React.FC = () => {
                 Log Masuk Sekarang
               </Button>
             </Link>
-            <Button className="bg-black/30 text-white hover:bg-black/40 font-semibold px-4 py-2 text-base rounded-md"> {/* Mengubah px, py, dan text-size */}
+            <Button className="bg-black/30 text-white hover:bg-black/40 font-semibold px-4 py-2 text-base rounded-md">
               Ketahui Lebih Lanjut
             </Button>
           </div>
